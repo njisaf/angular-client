@@ -3,6 +3,13 @@
 .page {
     display: flex;
     flex-direction: column;
+    .form {
+        display: flex;
+        flex-direction: row;
+        button {
+            margin-left: 10px;
+        }
+    }
     .movie-wrapper {
         display: flex;
         flex-direction: row;

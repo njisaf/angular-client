@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Apollo, gql} from 'apollo-angular';
-import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 const GET_MESSAGE = gql`
   query GetTestMessage {
@@ -48,23 +48,6 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    // this.apollo
-    //   .watchQuery({
-    //     query: GET_MOVIES,
-    //     variables: {
-    //       search: "Endgame"
-    //     }
-    //   })
-    //   .valueChanges.subscribe((result: any) => {
-    //     console.log('result: ', result);
-    //     // this.testMessage = result?.data?.testMessage;
-    //     this.movies = result?.data?.moviesdb?.Search;
-    //     this.imdb = result?.data?.imdb?.results;
-    //     console.log('this.imdb: ', this.imdb);
-    //     console.log('this.movies: ', this.movies);
-    //     this.loading = result.loading;
-    //     this.error = result.error;
-    //   });
   }
 
   searchMovies() {

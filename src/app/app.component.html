@@ -3,9 +3,10 @@
   {{testMessage}}
 </div>
 <div class="page">
+  <h1>Movie Search Comparison</h1>
   <div>
-    <form class="form-inline" [formGroup]="searchForm" (ngSubmit)="searchMovies()">
-      <div class="form-group mx-sm-3 mb-2">
+    <form class="form" [formGroup]="searchForm" (ngSubmit)="searchMovies()">
+      <div>
         <input
           type="text"
           class="form-control"
@@ -13,14 +14,14 @@
           placeholder="Search"
         />
       </div>
-      <button type="submit" class="btn btn-primary mb-2">
+      <button type="submit">
         Search
       </button>
     </form>
   </div>
   <div class="movie-wrapper">
     <div *ngIf="movies" class="results">
-      <h2>Movies Database Search</h2>
+      <h2>Movies Database</h2>
       <div *ngFor="let movie of movies">
         <h3>
           {{movie.Title}}
