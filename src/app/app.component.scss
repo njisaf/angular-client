@@ -1,0 +1,18 @@
+
+
+.page {
+    display: flex;
+    flex-direction: column;
+    .movie-wrapper {
+        display: flex;
+        flex-direction: row;
+        .results {
+            flex-direction: column;
+            margin-left: 20px;
+            img {
+                height: 300px;
+                max-width: 220px;
+            }
+        }
+    }
+}

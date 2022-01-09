@@ -1,0 +1,41 @@
+
+<div *ngIf="testMessage">
+  {{testMessage}}
+</div>
+<div class="page">
+  <div>
+    <form class="form-inline" [formGroup]="searchForm" (ngSubmit)="searchMovies()">
+      <div class="form-group mx-sm-3 mb-2">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="search"
+          placeholder="Search"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">
+        Search
+      </button>
+    </form>
+  </div>
+  <div class="movie-wrapper">
+    <div *ngIf="movies" class="results">
+      <h2>Movies Database Search</h2>
+      <div *ngFor="let movie of movies">
+        <h3>
+          {{movie.Title}}
+        </h3>
+        <img src="{{movie.Poster}}" alt="">
+      </div>
+    </div>
+    <div *ngIf="imdb" class="results">
+      <h2>IMDB</h2>
+      <div *ngFor="let movie of imdb">
+        <h3>
+          {{movie.title}}
+        </h3>
+        <img src="{{movie.image.url}}" alt="">
+      </div>
+    </div>
+  </div>
+</div>
